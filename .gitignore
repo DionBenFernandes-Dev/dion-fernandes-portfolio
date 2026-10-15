@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+.DS_Store
+.env*
+!.env.example
+Dion_Fernandes_Portfolio_Creative_Spec.pdf
