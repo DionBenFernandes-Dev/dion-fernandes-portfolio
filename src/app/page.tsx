@@ -49,13 +49,13 @@ export default function HomePage() {
 
         <section className="section-block work-section" aria-labelledby="work-title">
           <div className="section-heading"><div><span className="section-kicker">02 — IN DEVELOPMENT</span><h2 id="work-title">Work in progress</h2></div><Link className="text-link" href="/projects">Project roadmap <ArrowRight size={15} /></Link></div>
-          <div className="evidence-note"><span className="note-index">NOTE 01</span><p>There are no public project demos or repositories to show yet. These concepts are listed as proposed, not completed work.</p><Link href="/projects" aria-label="Read the proposed project roadmap"><ArrowUpRight size={17} /></Link></div>
+          <div className="evidence-note"><span className="note-index">NOTE 01</span><p>One project has a public source repository; the remaining roadmap concepts are listed as proposed.</p><Link href="/projects" aria-label="Browse the project list"><ArrowUpRight size={17} /></Link></div>
           <div className="proposal-grid">
             {projects.map((project, index) => (
               <Link className={`proposal-card proposal-card-${index + 1}`} href={`/projects/${project.slug}`} key={project.slug}>
-                <div className="proposal-art"><ProjectArt variant={project.visual} compact /><span className="art-label">CONCEPT / {String(index + 1).padStart(2, "0")}</span></div>
-                <div className="proposal-meta"><span>{project.category}</span><span className="status-text"><i /> Proposed</span></div>
-                <h3>{project.title}</h3><p>{project.summary}</p><span className="proposal-open">View concept <ArrowUpRight size={14} /></span>
+                <div className="proposal-art"><ProjectArt variant={project.visual} compact /><span className="art-label">{project.status === "Proposed" ? "CONCEPT" : "PROJECT"} / {String(index + 1).padStart(2, "0")}</span></div>
+                <div className="proposal-meta"><span>{project.category}</span><span className="status-text"><i /> {project.status}</span></div>
+                <h3>{project.title}</h3><p>{project.summary}</p><span className="proposal-open">{project.status === "Proposed" ? "View concept" : "View project"} <ArrowUpRight size={14} /></span>
               </Link>
             ))}
           </div>

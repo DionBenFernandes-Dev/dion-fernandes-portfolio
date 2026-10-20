@@ -272,6 +272,7 @@ button { color: inherit; }
 .resume-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 9px 0 27px; border-bottom: 1px solid var(--ink); }
 .resume-top h1 { margin: 13px 0 3px; font-family: var(--serif); font-size: 39px; font-weight: 400; }
 .resume-top p { margin: 0; color: var(--muted); font-size: 12px; }
+.resume-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .resume-columns { display: grid; grid-template-columns: minmax(0, 1fr) 245px; gap: 45px; padding-top: 20px; }
 .resume-section { padding: 17px 0 19px; border-bottom: 1px solid var(--rule); }
 .resume-section h2, .resume-aside h2 { margin: 0 0 12px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
